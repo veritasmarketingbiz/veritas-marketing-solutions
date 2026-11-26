@@ -9,9 +9,9 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 main,section,header,footer,.marq,.brands{max-width:100vw;overflow-x:clip}
-body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
 img,video,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
@@ -113,3 +113,6 @@ body.pb-on .fab{bottom:100px}
 @media (max-width:560px){body.pb-on .fab{bottom:150px}}
 
 @media (max-width:360px){.btn{white-space:normal;text-align:center;justify-content:center;padding:13px 18px}.nav .bar{gap:10px}.logo small{letter-spacing:.14em}}
+
+/* clip any horizontal overflow on a wrapper (overflow on html/body does not stop mobile zoom-out) */
+.page{position:relative;width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip}
