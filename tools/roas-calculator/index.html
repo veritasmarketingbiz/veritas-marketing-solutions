@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Break-even ROAS Calculator (with COD & RTO) | Veritas</title>
+<meta name="description" content="Free break-even ROAS calculator for Indian D2C brands. Add COD, shipping and RTO to see the ROAS you really need on Meta ads.">
+<link rel="canonical" href="https://veritasmarketing.in/tools/roas-calculator/">
+<meta property="og:type" content="website"><meta property="og:title" content="Break-even ROAS Calculator (with COD &amp; RTO) | Veritas"><meta property="og:description" content="Free break-even ROAS calculator for Indian D2C brands. Add COD, shipping and RTO to see the ROAS you really need on Meta ads.">
+<meta property="og:url" content="https://veritasmarketing.in/tools/roas-calculator/"><meta property="og:image" content="https://veritasmarketing.in/assets/og.png">
+<meta name="theme-color" content="#050812">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Caveat:wght@700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<!-- Analytics: paste GA4 / Meta Pixel snippets here when ready -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Veritas Marketing Solutions", "url": "https://veritasmarketing.in", "email": "dheeraj@veritasmarketing.in", "areaServed": "IN", "address": {"@type": "PostalAddress", "addressLocality": "Delhi", "addressCountry": "IN"}, "sameAs": ["https://www.instagram.com/veritasmarketingsolutions/", "https://www.youtube.com/@VeritasMarketingSolutions"]}</script>
+<style>.tp /* Layout: one column "worksheet" — inputs card,.tp live result,.tp then the step-by-step math in the same order as the reel */
+
+*{box-sizing:border-box}.tp{background:radial-gradient(1200px 900px at 20% 0%,var(--bg2),var(--bg) 70%) fixed,var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5}.tp .twrap{max-width:680px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:22px}.tp .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;font-size:13px;color:var(--muted)}.tp .brand b{color:var(--fg)}.tp .dot{width:10px;height:10px;border-radius:50%;background:var(--mint);box-shadow:0 0 12px var(--mint)}.tp h1{font-family:var(--display);font-size:clamp(40px,9vw,58px);line-height:1;margin:0;text-wrap:balance}.tp h1 span{color:var(--coral);text-shadow:0 0 18px rgba(255,90,90,.45)}.tp .lede{color:var(--muted);margin:0;max-width:60ch}.tp .formula{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-weight:700;font-size:18px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px}.tp .formula .pill{background:rgba(255,198,0,.12);border:1px solid rgba(255,198,0,.5);color:var(--yellow);border-radius:999px;padding:4px 12px}.tp section{display:flex;flex-direction:column;gap:12px}.tp h2{font-family:var(--display);font-size:32px;margin:0;line-height:1}.tp .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:520px){.tp .grid{grid-template-columns:1fr}}.tp label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--muted);font-weight:600}.tp .field{display:flex;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 12px;transition:border-color .15s}.tp .field:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px rgba(70,140,255,.25)}.tp .field span{color:var(--muted);font-weight:700}.tp input{flex:1;min-width:0;background:transparent;border:0;color:var(--fg);font:600 17px var(--body);padding:12px 6px;font-variant-numeric:tabular-nums;outline:none}.tp .hint{font-weight:400;font-size:12px}.tp .result{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:520px){.tp .result{grid-template-columns:1fr}}.tp .kpi{display:flex;flex-direction:column;gap:2px}.tp .kpi small{color:var(--muted);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}.tp .kpi strong{font-size:40px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.1}.tp .kpi.main strong{color:var(--coral)}.tp .kpi.base strong{color:var(--mint)}.tp .verdict{grid-column:1/-1;border-radius:12px;padding:12px 14px;font-weight:600}.tp .verdict.ok{background:rgba(34,211,160,.12);border:1px solid rgba(34,211,160,.45)}.tp .verdict.bad{background:rgba(255,90,90,.12);border:1px solid rgba(255,90,90,.5)}.tp ol.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;counter-reset:s}.tp ol.steps li{counter-increment:s;display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:10px 12px;border-bottom:1px dashed var(--line)}.tp ol.steps li::before{content:counter(s);font-weight:800;color:var(--blue)}.tp ol.steps .math{color:var(--muted);font-size:13px}.tp ol.steps .val{font-weight:700;font-variant-numeric:tabular-nums;text-align:right}.tp ol.steps li.total .val{color:var(--yellow)}.tp .tips{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}.tp .tips li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}.tp .tips b{color:var(--mint)}.tp .tfoot{color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:14px}.tp .tcta{font-family:var(--display);font-size:28px;color:var(--fg)}.tp button{font:600 14px var(--body);color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;align-self:flex-start}.tp button:hover,.tp button:focus-visible{border-color:var(--blue);outline:none}
+@media (prefers-reduced-motion:reduce){.tp *{transition:none!important}}
+
+.tp{padding:130px 0 40px;--display:"Montserrat",system-ui,sans-serif;--card:#0e1630;--line:rgba(138,184,255,.18);--blue:#468cff}
+.tp section{padding:0}.tp h1{font-weight:800;letter-spacing:-.02em;font-size:clamp(34px,7vw,50px)}.tp h2{font-weight:800;font-size:24px;letter-spacing:-.01em}.tp .tcta{font-size:20px;font-weight:700}.tp .twrap{max-width:720px}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:6px}.crumb a{color:var(--sky)}
+.tp .tcta a{color:var(--sky)}
+.tp-cta{margin-top:10px;padding:22px;border-radius:20px;border:1px solid rgba(138,184,255,.28);background:radial-gradient(400px 200px at 0 0,rgba(61,123,255,.25),transparent 60%),#0e1630;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.tp-cta b{font-size:18px}.tp-cta p{color:var(--muted);font-size:14px;margin-top:2px}
+.tp .tp-cta .btn{align-self:center;border:0;padding:12px 18px;font-size:15px}</style>
+</head>
+<body>
+<nav class="nav"><div class="bar">
+  <a class="logo" href="/" aria-label="Veritas Marketing Solutions home"><img src="/assets/mark.png" alt=""><span>VERITAS<small>MARKETING SOLUTIONS</small></span></a>
+  <div class="links"><a href="/#services">Services</a><a href="/#cases">Results</a><a href="/#clients">Clients</a><a href="/#process">Process</a><a href="/tools/" class=on>Free Tools</a></div>
+  <a class="btn btn-p" href="/#contact" data-magnet>Free audit call <span class="arr">→</span></a>
+  <button class="burger" aria-label="Menu"><i></i></button>
+</div></nav>
+<main class="tp">
+
+<div class="twrap"><p class="crumb"><a href="/tools/">← All free tools</a></p>
+  
+  <h1>3x ROAS pe bhi <span>loss?</span></h1>
+  <p class="lede">Apne product ke numbers daalo. Calculator batayega ki Meta Ads Manager mein dikhne wala ROAS kitna hona chahiye taaki COD aur RTO ke baad bhi aap loss mein na jao.</p>
+
+  <div class="formula">Break-even ROAS <span>=</span> <span class="pill">1 ÷ margin %</span> <span style="color:var(--muted);font-weight:500;font-size:14px">(RTO se pehle)</span></div>
+
+  <section aria-labelledby="h-in">
+    <h2 id="h-in">Aapke numbers (per order)</h2>
+    <div class="grid">
+      <label for="price">Selling price<div class="field"><span>₹</span><input id="price" type="number" inputmode="decimal" min="0" value="1000"></div></label>
+      <label for="cogs">Product cost<div class="field"><span>₹</span><input id="cogs" type="number" inputmode="decimal" min="0" value="400"></div></label>
+      <label for="ship">Shipping, ek taraf<div class="field"><span>₹</span><input id="ship" type="number" inputmode="decimal" min="0" value="80"></div></label>
+      <label for="ret">Return shipping (RTO)<div class="field"><span>₹</span><input id="ret" type="number" inputmode="decimal" min="0" value="80"></div></label>
+      <label for="pack">Packing<div class="field"><span>₹</span><input id="pack" type="number" inputmode="decimal" min="0" value="20"></div></label>
+      <label for="fees">COD / gateway fee + baaki kharche<div class="field"><span>₹</span><input id="fees" type="number" inputmode="decimal" min="0" value="100"></div><span class="hint">Sirf delivered orders pe lagne wale</span></label>
+      <label for="rto">RTO rate<div class="field"><input id="rto" type="number" inputmode="decimal" min="0" max="99" value="25"><span>%</span></div></label>
+      <label for="roas">Ads Manager mein aapka ROAS (optional)<div class="field"><input id="roas" type="number" inputmode="decimal" min="0" step="0.1" value="3"><span>x</span></div></label>
+    </div>
+    <button id="reset" type="button">Reel wala example wapas lao</button>
+  </section>
+
+  <div class="result" aria-live="polite">
+    <div class="kpi base"><small>Break-even (bina RTO)</small><strong id="beBase">2.50x</strong></div>
+    <div class="kpi main"><small>Break-even (RTO ke saath)</small><strong id="beRto">3.92x</strong></div>
+    <div class="verdict bad" id="verdict">Aapka 3x ROAS break-even se neeche hai: har ₹100 ad spend pe loss.</div>
+  </div>
+
+  <section aria-labelledby="h-steps">
+    <h2 id="h-steps">Calculation, step by step (100 orders)</h2>
+    <ol class="steps" id="steps"></ol>
+  </section>
+
+  <section aria-labelledby="h-tips">
+    <h2 id="h-tips">Ab kya karein?</h2>
+    <ul class="tips">
+      <li><b>Target ROAS = RTO wala break-even, 2.5 nahi.</b> Cost per result ya ROAS goal set karte waqt yahi number use karo.</li>
+      <li><b>RTO kam karo, break-even khud neeche aayega.</b> COD orders pe confirmation call/WhatsApp, aur high-RTO pincodes pe prepaid discount.</li>
+      <li><b>Meta ko delivered order ka signal do.</b> Agar possible ho, delivered/cancelled data Conversions API se bhejo, taaki optimisation sirf "order placed" pe na ho.</li>
+      <li><b>Har mahine numbers update karo.</b> Shipping rates aur RTO % badalte rehte hain.</li>
+    </ul>
+  </section>
+
+  <div class="tp-cta"><div><b>Numbers scary? Let's fix them together.</b><p>Free 30-min audit call. Reply within 24 hours.</p></div><a class="btn btn-p" href="/#contact">Book free audit →</a></div>
+  <p class="tcta">Aise aur formulas ke liye Instagram pe <a href="https://www.instagram.com/veritasmarketingsolutions/" target="_blank" rel="noopener">@veritasmarketingsolutions</a> follow karo.</p>
+  <p class="tfoot">Default numbers sirf example hain (Veritas reel, 26 Nov 2026). Calculation maan ke chalta hai ki Meta purchase order place hote hi count karta hai, aur RTO hone pe product wapas stock mein aa jaata hai. Ye financial advice nahi hai; apne actual numbers se check karein.</p>
+</div>
+
+<script>
+const ids=["price","cogs","ship","ret","pack","fees","rto","roas"];
+const el=Object.fromEntries(ids.map(i=>[i,document.getElementById(i)]));
+const defaults={price:1000,cogs:400,ship:80,ret:80,pack:20,fees:100,rto:25,roas:3};
+const inr=n=>"₹"+Math.round(n).toLocaleString("en-IN");
+const num=v=>{const n=parseFloat(v);return isFinite(n)&&n>=0?n:0};
+function calc(){
+  const v=Object.fromEntries(ids.map(i=>[i,num(el[i].value)]));
+  const r=Math.min(v.rto,99)/100, N=100;
+  const unit=v.price-v.cogs-v.ship-v.pack-v.fees;
+  const marginPct=v.price>0?unit/v.price:0;
+  const delivered=N*(1-r), rtoOrders=N*r;
+  const revenue=N*v.price;
+  const profitDel=delivered*unit;
+  const rtoLossEach=v.ship+v.ret+v.pack;
+  const rtoLoss=rtoOrders*rtoLossEach;
+  const left=profitDel-rtoLoss;
+  const beBase=unit>0?v.price/unit:Infinity;
+  const beRto=left>0?revenue/left:Infinity;
+  const f=x=>isFinite(x)?x.toFixed(2)+"x":"Loss";
+  document.getElementById("beBase").textContent=f(beBase);
+  document.getElementById("beRto").textContent=f(beRto);
+  const vd=document.getElementById("verdict");
+  if(!isFinite(beRto)){vd.className="verdict bad";vd.textContent="In numbers pe RTO ke baad koi profit nahi bachta, kisi bhi ROAS pe loss hai.";}
+  else if(v.roas>0){const ok=v.roas>=beRto;vd.className="verdict "+(ok?"ok":"bad");
+    vd.textContent=ok?`Aapka ${v.roas}x ROAS break-even (${beRto.toFixed(2)}x) se upar hai. Profit mein ho.`:`Aapka ${v.roas}x ROAS break-even (${beRto.toFixed(2)}x) se neeche hai: is ROAS pe loss ho raha hai.`;}
+  else{vd.className="verdict ok";vd.textContent="Apna current ROAS daalo, verdict yahan dikhega.";}
+  const rows=[
+    ["Margin per delivered order",`${inr(v.price)} − ${inr(v.cogs)} − ${inr(v.ship)} − ${inr(v.pack)} − ${inr(v.fees)}`,inr(unit)+` (${(marginPct*100).toFixed(0)}%)`],
+    ["Break-even bina RTO",`1 ÷ ${(marginPct*100).toFixed(0)}%`,f(beBase)],
+    ["Meta jo revenue dikhata hai",`100 orders × ${inr(v.price)}`,inr(revenue)],
+    ["Delivered orders se profit",`${delivered.toFixed(0)} × ${inr(unit)}`,inr(profitDel)],
+    ["RTO pe nuksaan",`${rtoOrders.toFixed(0)} × ${inr(rtoLossEach)} (shipping dono taraf + packing)`,"− "+inr(rtoLoss)],
+    ["Ads se pehle bacha",`${inr(profitDel)} − ${inr(rtoLoss)}`,inr(left)],
+    ["Break-even ROAS (RTO ke saath)",`${inr(revenue)} ÷ ${inr(left)}`,f(beRto)]
+  ];
+  document.getElementById("steps").innerHTML=rows.map((x,i)=>`<li class="${i===rows.length-1?"total":""}"><div><div>${x[0]}</div><div class="math">${x[1]}</div></div><div class="val">${x[2]}</div></li>`).join("");
+}
+ids.forEach(i=>el[i].addEventListener("input",calc));
+document.getElementById("reset").addEventListener("click",()=>{ids.forEach(i=>el[i].value=defaults[i]);calc();});
+calc();
+</script>
+</main>
+<footer><div class="wrap">
+  <div class="foot">
+    <div><a class="logo" href="/"><img src="/assets/mark.png" alt=""><span>VERITAS<small>MARKETING SOLUTIONS</small></span></a>
+      <p>Social ads experts for D2C brands and growing businesses. Based in Delhi, working across India.</p></div>
+    <div><h4>Explore</h4><a href="/#services">Services</a><a href="/#clients">Clients</a><a href="/#process">Process</a><a href="/tools/">Free tools</a></div>
+    <div><h4>Free tools</h4><a href="/tools/roas-calculator/">Break-even ROAS</a><a href="/tools/auction-check/">Ad relevance check</a></div>
+    <div><h4>Talk to us</h4><a href="https://wa.me/919667589055?text=Hi%20Veritas%21%20I%27d%20like%20to%20book%20a%20free%2030-min%20audit%20call." target="_blank" rel="noopener">WhatsApp +91 96675 89055</a><a href="https://wa.me/919310192563?text=Hi%20Veritas%21%20I%27d%20like%20to%20book%20a%20free%2030-min%20audit%20call." target="_blank" rel="noopener">WhatsApp +91 93101 92563</a>
+      <a href="mailto:dheeraj@veritasmarketing.in">dheeraj@veritasmarketing.in</a><a href="https://www.instagram.com/veritasmarketingsolutions/" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@VeritasMarketingSolutions" target="_blank" rel="noopener">YouTube</a></div>
+  </div>
+  <div class="legal"><span>© <span data-year></span> Veritas Marketing Solutions</span><span>Veritas means truth. Honest numbers, always.</span></div>
+</div></footer>
+<a class="fab" href="https://wa.me/919667589055?text=Hi%20Veritas%21%20I%27d%20like%20to%20book%20a%20free%2030-min%20audit%20call." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-cur="Chat"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
