@@ -58,6 +58,25 @@
   }), {threshold:.5});
   document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
 
+  /* analytics events (GA4) */
+  const track = (name, params) => { try { window.gtag && gtag('event', name, params || {}); } catch (_) {} };
+  window.vmsTrack = track;
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a'); if (!a) return;
+    const h = a.getAttribute('href') || '';
+    const where = a.closest('.nav') ? 'nav' : a.closest('.hero') ? 'hero' : a.closest('#contact') ? 'contact' : a.closest('footer') ? 'footer' : a.classList.contains('fab') ? 'floating_button' : a.id === 'painwa' ? 'problems' : (a.closest('section') || {}).id || 'page';
+    if (h.includes('wa.me')) track('whatsapp_click', { link_location: where });
+    else if (h.startsWith('mailto:')) track('email_click', { link_location: where });
+    else if (h.includes('instagram.com')) track('social_click', { platform: 'instagram', link_location: where });
+    else if (h.includes('youtube.com')) track('social_click', { platform: 'youtube', link_location: where });
+    else if (h.includes('#contact')) track('audit_cta_click', { link_location: where });
+    else if (h.includes('/tools/')) track('tool_link_click', { link_location: where, tool_path: h });
+  }, true);
+  /* tool usage: first interaction on a calculator page */
+  const tool = location.pathname.includes('roas-calculator') ? 'roas_calculator' : location.pathname.includes('auction-check') ? 'auction_check' : null;
+  if (tool) { let done = false; const once = () => { if (!done) { done = true; track('tool_used', { tool_name: tool }); } };
+    document.addEventListener('input', once, true); document.addEventListener('change', once, true); }
+
   /* year */
   document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 })();
